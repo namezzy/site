@@ -43,16 +43,22 @@ const Comments = () => {
       {mounted ? (
         <Giscus
           id={id}
-          repo="npmstudy/indie-dev-with-ai"
-          repoId="R_kgDOLgl_xw"
-          category="Announcements"
-          categoryId="DIC_kwDOLgl_x84CeBtj"
+          repo="namezzy/discussion"
+          repoId="R_kgDOLhdqSg"
+          category="General"
+          categoryId="DIC_kwDOLhdqSs4CeBzV"
           mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="1"
+          data-input-position="top"
+          data-theme="preferred_color_scheme"
+          data-lang="zh-CN"
+          data-loading="lazy"
+          crossorigin="anonymous"
           reactionsEnabled="1"
           emitMetadata="0"
           inputPosition="top"
-          lang="zh-CN"
-          loading="lazy"
           theme={theme}
         />
       ) : null}
