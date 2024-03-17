@@ -1,0 +1,24 @@
+---
+title: This is a new page
+description: Created by 3/17/2024
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+import Comments from '../../../components/Comment.jsx'
+
+<CardGrid>
+  <Card title="Starlight" icon="star">
+    最简单写文档的工具
+  </Card>
+  <Card title="Vercel" icon="moon">
+    最方便的和ci/cd集成的部署平台
+  </Card>
+</CardGrid>
+
+
+<Comments client:only="react" />
+
+
+
+
