@@ -28,6 +28,13 @@ export default defineConfig({
       autogenerate: {
         directory: 'post'
       }
-    }]
+    }, {
+      label: 'Learn React',
+      autogenerate: {
+        directory: 'Learn React'
+      }
+    }
+  
+  ]
   }), react()]
 });

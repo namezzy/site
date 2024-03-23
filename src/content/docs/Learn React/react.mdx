@@ -1,0 +1,86 @@
+---
+title: 学习React的路线以及重要的知识点
+description: Created by 3/23/2024
+---
+
+
+
+
+React 18 是一个重要的版本，它引入了许多新特性和改进，包括对并发模式的支持、新的渲染API等。以下是学习React 18的路线和一些重要知识点。
+
+## 1. 基础知识
+
+在深入学习React 18的新特性之前，确保你已经掌握了React的基础知识，包括但不限于：
+
+- JSX语法
+- 组件（类组件和函数组件）
+- State & Props
+- 生命周期方法
+- 事件处理
+- 条件渲染
+- 列表和键
+- 表单处理
+- Context API
+- Hooks (useState, useEffect, useContext, useRef等)
+
+## 2. React 18 新特性
+
+### 2.1 自动批处理
+
+React 18引入了自动批处理，这意味着在事件处理程序和异步代码中的多个状态更新会自动合并成一个渲染更新，从而提高应用程序的性能。
+
+### 2.2 startTransition
+
+`startTransition`是一个新的API，它允许你将某些状态更新标记为“过渡”。这对于改善用户体验很有帮助，因为它可以让React保持界面的响应性，即使是在大型更新中也是如此。
+
+### 2.3 新的Root API
+
+React 18引入了一个新的客户端渲染API：`createRoot`。它替代了`ReactDOM.render`，为并发特性打下了基础。
+
+```jsx
+import { createRoot } from 'react-dom/client';
+const container = document.getElementById('app');
+const root = createRoot(container);
+root.render(<App />);
+```
+
+### 2.4 useId Hook
+
+`useId`是一个新的Hook，它可以生成在客户端和服务器端渲染期间稳定、唯一的ID，有助于解决SSR(服务器端渲染)和客户端渲染不一致的问题。
+
+### 2.5 Suspense for Data Fetching
+
+虽然`Suspense`在React 16中被引入用于代码分割，但React 18扩展了它的能力，支持数据获取。这意味着你现在可以使用`Suspense`来声明数据加载状态，从而提高应用程序的用户体验。
+
+### 2.6 服务端渲染(SSR)和流(Streaming)
+
+React 18增强了对服务端渲染和客户端流的支持，这意味着React可以在数据到达时逐步发送HTML给浏览器，从而更快地显示内容。
+
+## 3. 迁移到React 18
+
+在学习了React 18的新特性之后，如果你有一个现有的React项目，你可能想知道如何迁移到React 18。这里有一些关键步骤：
+
+- 升级你的React和ReactDOM包到最新版本。
+- 替换`ReactDOM.render`为`createRoot`。
+- 测试你的应用程序，并根据需要使用新的API和特性进行调整。
+
+## 4. 实战项目
+
+最好的学习方式是通过构建实际项目。尝试创建一个新项目，或者在现有项目中实现React 18的特性，比如使用`startTransition`优化用户交互，或者使用`Suspense`来改进数据获取的方式。
+
+## 5. 资源
+
+为了深入学习和跟上React 18的最新进展，以下是一些有用的资源：
+
+- [React 官方文档](https://reactjs.org/)
+- [React 18 发布说明](https://reactjs.org/blog/2022/03/29/react-v18.html)
+- [React工作原理](https://reactjs.org/docs/concurrent-mode-intro.html)
+- [React 社区和博客](https://reactjs.org/community/support.html)
+
+通过遵循上述学习路线和探索这些重要的知识点，你将能够有效地掌握React 18，并在你的Web开发项目中利用它的强大功能。
+
+
+
+
+
+
