@@ -6,7 +6,7 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   integrations: [starlight({
-    title: '小米椒的首页',
+    title: '椒椒的乐园',
     social: {
       github: 'https://github.com/namezzy'
     },
